@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.changeskindemo.MainActivity" >
+
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="#00ffff"
+        android:id="@+id/top"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:text="模式切换"
+            />
+    </RelativeLayout>
+    <ImageView 
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/banner"
+        android:layout_below="@id/top"
+        android:id="@+id/banner"
+        android:scaleType="fitXY"
+        />
+    <com.example.changeskindemo.view.MyGridView
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_below="@id/banner"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="0.0dip"
+            android:listSelector="@null"
+            android:numColumns="3"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="0.0dip" />
+    <ImageView 
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/mode"
+        android:src="@drawable/sun"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        />
+
+</RelativeLayout>
